@@ -1,19 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="row">
+  <p id="notice"><%= notice %></p>
+  <div class="large-9 columns">
+    <h2 class='text-center'><%= link_to  @post.title, post_path(@post) %></h2>
+    <h4 class='text-center'><%= "Written by #{@post.user.first_name} #{@post.user.last_name}"  %></h2>
+    <p><%= @post.content.html_safe %></p>
+  </div>
+</div>

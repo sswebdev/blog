@@ -2,7 +2,7 @@
   <p id="notice"><%= notice %></p>
   <div class="large-9 columns">
     <h2 class='text-center'><%= link_to  @post.title, post_path(@post) %></h2>
-    <h4 class='text-center'><%= "Written by #{@post.user.first_name} #{@post.user.last_name}"  %></h2>
+    <h4 class='text-center'><%= "Written by #{@post.user.name} #{@post.user.last_name}"  %></h2>
     <p><%= @post.content.html_safe %></p>
   </div>
 </div>

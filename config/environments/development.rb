@@ -26,4 +26,11 @@ Blog::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.assets.precompile << Proc.new { |path|
+    if path =~ /\.(eot|svg|ttf|woff|otf)\z/
+      true
+    end
+  }
+
 end

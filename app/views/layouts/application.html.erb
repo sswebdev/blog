@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <head>
+    <title>Blog</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-</body>
+  <body>
+    <div class='container'>
+      <h5 class='large-8 text-center'><%= link_to "You're reading The Active Record", root_path %></h5>
+      <%= yield %>
+    </div>
+  </body>
+
 </html>

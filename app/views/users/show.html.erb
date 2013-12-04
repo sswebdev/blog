@@ -1,19 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="large-11 columns">
+    <h2 class='text-center'><%= @user.name %></h2>
+    <p class='text-center'>
+      <%= @user.email %>
+    </p>
+    <p class='text-center'>
+      <%= link_to 'Edit User', edit_user_path(@user), class: 'button' %>
+      <%= link_to 'Delete User', user_path(@user), method: :delete, confirm: "Delete user?", class: 'alert-color' %>
+    </p>
+    <p class='text-center'>
+      <%= link_to 'Back to Users', users_path %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

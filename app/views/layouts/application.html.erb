@@ -9,8 +9,11 @@
   </head>
 
   <body>
-    <h5 class='large-8 text-center'><%= link_to "You're reading The Active Record", root_path %></h5>
-    <%= yield %>
+    <div class='row'>
+      <h5 class='large-4 text-center'><%= link_to "You're reading The Active Record", root_path %></h5>
+      <p id="notice"><%= notice %></p>
+      <%= yield %>
+    </div>
   </body>
 
 </html>

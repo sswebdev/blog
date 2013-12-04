@@ -1,5 +1,4 @@
 <div class="row">
-  <p id="notice"><%= notice %></p>
   <div class="large-11 columns">
     <h2 class='text-center'><%= link_to  @post.title, post_path(@post) %></h2>
     <h4 class='text-center'><%= "Written by #{link_to @post.user.name, user_path(@post.user)}".html_safe %></h2>

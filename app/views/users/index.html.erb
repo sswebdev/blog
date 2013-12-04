@@ -1,31 +1,11 @@
-<h1>Listing users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<div class='row'>
+  <div class='large-11 columns text-center'>
+    <ul>
+      <h1 class='text-center'>Users</h1>
+      <% @users.each do |user| %>
+        <h3><%= link_to user.name, user %></h3>
+      <% end %>
+      <h3><%= link_to 'Add New User', new_user_path %></h3>
+    </ul>
+  </div>
+</div>
